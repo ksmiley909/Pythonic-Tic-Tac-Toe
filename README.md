@@ -1,2 +1,5 @@
 # Pythonic-Tic-Tac-Toe
 Classic Tic-Tac-Toe game written in Python
+After learning Python fundamentals over the last few months, I decided it was about time I shipped something.  This code is mostly note for note from @techwithtim 's youtube tutorial, but with a few alterations.  Also, the I've slightly adjusted the board.  I intend to use this code as a framework for more substantial modifications as I develop new skills.  
+
+The tutorial code as written generates errors in the event of a tie game.  I've noted two solutions with comments,  the root cause of the error being a lack of a final return statement in the compMove function.   As written, the compMove function generates a None Type Object which does not mirror the logic in the main function.  Solution one: (Line 108): in the "main" function, set the "if move" statement  function == 'none' rather than == '0', mirroring the comMove logic as written.   Solution two (Line 77):  add a final return statement to the compMove function "closing"  the logic loop by generating a Boolean False/0 Integer and mirroring the main function logic.  This was the solution I chose to implement.
